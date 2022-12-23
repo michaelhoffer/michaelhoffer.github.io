@@ -1,55 +1,20 @@
-<!DOCTYPE HTML>
-<!--
-	Code by Will Hoffer
-    
-    Adapted from 
-    Future Imperfect by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Single - Future Imperfect by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="/assets/css/main.css" />
-	</head>
-	<body class="single is-preload">
+---
+layout: default
+---
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<!-- Post -->
+<article class="post">
+    <header>
+        <div class="title">
+            <h2><a href="#">{{page.title}}</a></h2>
+            <p>{{page.description}}</p>
+        </div>
+        <div class="meta">
+            <time class="published" datetime="">{{page.date | date: "%D" }}</time>
+            <a href="#" class="author"><span class="name">{{site.name}}</span><img src="images/avatar.jpg" alt="" /></a>
+        </div>
+    </header>
+    {{ content }}
 
-				{% include header.html %}
-
-				{% include menu.html %}
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Post -->
-							<article class="post">
-                                <header>
-                                    <div class="title">
-                                        <h2><a href="#">{{page.title}}</a></h2>
-                                        <p>{{page.description}}</p>
-                                    </div>
-                                    <div class="meta">
-                                        <time class="published" datetime="">{{page.date}}</time>
-                                        <a href="#" class="author"><span class="name">{{site.name}}</span><img src="images/avatar.jpg" alt="" /></a>
-                                    </div>
-                                </header>
-								{{ content }}
-
-								{% include postfooter.html %}
-							</article>
-
-					</div>
-
-				{% include footer.html %}
-
-			</div>
-
-		{% include bodyscripts.html %}
-
-	</body>
-</html>
+    {% include postfooter.html %}
+</article>
