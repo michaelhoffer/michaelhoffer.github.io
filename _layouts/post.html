@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<!-- Post -->
+<article class="post">
+    <header>
+        <div class="title">
+            <h2><a href="#">{{page.title}}</a></h2>
+            <p>{{page.description}}</p>
+        </div>
+        <div class="meta">
+            <time class="published" datetime="">{{page.date | date: "%D" }}</time>
+            <a href="#" class="author"><span class="name">{{site.name}}</span><img src="/images/avatar.jpg" alt="" /></a>
+        </div>
+    </header>
+    {{ content }}
+
+    {% include postfooter.html %}
+</article>
