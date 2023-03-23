@@ -5,7 +5,7 @@ layout: default
 
 
 {% for post in site.posts %}
-{% if post.title contains 'Resume' %}
+{% if post.title contains 'About' %}
 <article class="post">
 	<header>
 		<div class="title">
